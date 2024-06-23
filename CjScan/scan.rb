@@ -15,7 +15,8 @@ def scann(file_path)
     content = file.read
 
     # kontrolt
-    if payloads.any? { |payload| content.include?(payload) }
+    payloads.each do |payload|
+    if conent.include?(payload)
       situation = true
       puts "A suspicious crontab detected. Please delete it if the crontab is not trusted and please make a AV scan"
     else
