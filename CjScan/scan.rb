@@ -40,11 +40,14 @@ end
 puts "Lütfen adınızı girin:"
 ad = gets.chomp
 
-# Kullanıcı adını doğrudan kullanarak işlem yapabilirsiniz
-file_path_1 = "/var/spool/cron/crontabs/#{whoami}"
-puts "root kullanıcısı için crontab bulunamadı"
-scann(file_path_1)
+# kullanıcı otomatik
+file_pa1th = "/var/spool/cron/crontabs/#{whoami}"
+scann(file_pa1th)
 
-# Ayrıca kullanıcıdan alınan adı da kullanabilirsiniz
-file_path_2 = "/var/spool/cron/crontabs/#{ad}"
-scann(file_path_2)
+# alınan ad
+file_pa2th = "/var/spool/cron/crontabs/#{ad}"
+scann(file_pa2th)
+puts "taranan crontab dizinleri"
+puts file_pa1th
+puts file_pa2th
+
