@@ -8,7 +8,7 @@ def meeter():
 end
 
 
-def scann(file_path)
+def scann(file_path):
   begin
     # dosyayı okuma modunda açıyorum
     file = File.open(file_path, "r")
