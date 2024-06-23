@@ -2,13 +2,13 @@ payloads = ['package main;import"os/exec";import"net";func main(){c,_:=net.Dial(
 
 
 
-def meeter():
+def meeter()
   banner = "Pardus/linux crontab virüs tarayıcı"
   puts banner
 end
 
 
-def scann(file_path):
+def scann(file_path)
   begin
     # dosyayı okuma modunda açıyorum
     file = File.open(file_path, "r")
@@ -37,8 +37,14 @@ end
 
 
 
+puts "Lütfen adınızı girin:"
+ad = gets.chomp
 
-#use
-meeter()
-file_path = "/var/spool/cron/crontabs/#{whoami}"
-scann(file_path)  
+# Kullanıcı adını doğrudan kullanarak işlem yapabilirsiniz
+file_path_1 = "/var/spool/cron/crontabs/#{whoami}"
+puts "root kullanıcısı için crontab bulunamadı"
+scann(file_path_1)
+
+# Ayrıca kullanıcıdan alınan adı da kullanabilirsiniz
+file_path_2 = "/var/spool/cron/crontabs/#{ad}"
+scann(file_path_2)
